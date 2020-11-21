@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+
+
+<body>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li class="active">
+                        <a href="/retailseller">Profile</a>
+                    </li>
+                    <li>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="/retailseller/addProduct">Add Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/deleteProduct">Delete Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/editProduct">Edit Deatils</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/addCoupon">Add Coupon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#noSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Publish Product</a>
+                        <ul class="collapse list-unstyled" id="noSubmenu">
+                            <li>
+                                <a href="/retailseller/publishedProduct">Published Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/unpublishedProduct">Unpublished Product</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sells</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="/retailseller/reviewProduct">Review</a>
+                            </li>
+                            <li>
+                                <a href="#">Sells Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#">Report Customer</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li>
+                        <a href="#">Orders</a>
+                    </li>
+                    <li>
+                        <a href="#">Payment</a>
+                    </li>
+                </ul>
+
+                <div class="footer">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+
+            </div>
+        </nav>
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <ul>
+                <li><a href="/admin">Home</a></li>
+                <li><a href="/logout">Log Out</a></li>
+                <li ">
+                    <div class="dropdown ">
+                        <div class="dropbtn ">Profile</div>
+                        <div class="dropdown-content ">
+                            <a href="/admin/profile ">View Profile</a><br>
+                            <a href="/admin/editProfile ">Edit Profile</a>
+                        </div>
+                    </div>
+                </li>
+                <li ><a href="/admin/restaurants ">All Restaurants</a></li>
+                <li ><a href="/admin/addRestaurant ">Add Restaurant</a></li>
+            </ul>
+            <div align="center " width="80% ">
+                <table align="center " width="50% ">
+                    <tr>
+                        <td width="30% ">Retail Seller ID</td>
+                        <td width="10% ">:</td>
+                        <td width="30% ">
+                            <%=retailseller_id%>
+                        </td>
+                        <td width="30% " rowspan="5 ">
+                            <img align="right " src=" " alt="person " height="200px " width="200px " />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Product Name</td>
+                        <td>:</td>
+                        <td>
+                            <%=product_name%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Quantity</td>
+                        <td>:</td>
+                        <td>
+                            <%=quantity%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        <td>:</td>
+                        <td>
+                            <%=price%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Catagory</td>
+                        <td>:</td>
+                        <td>
+                            <%=catagory_id%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Rating</td>
+                        <td>:</td>
+                        <td>
+                            <%=average_rating%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>description</td>
+                        <td>:</td>
+                        <td>
+                            <%=description%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Published</td>
+                        <td>:</td>
+                        <% if(published==0){ %> 
+                            <td><span>Unpublished</span>
+                            </td>
+                            <%} else { %>
+                                <td><span>published</span>
+                                </td>
+
+                                <%} %>
+
+
+                        
+                    </tr>
+                    <tr>
+                        <td>Exclusive</td>
+                        <td>:</td>
+                        <td>
+                            <%=exclusive%>
+                        </td>
+                    </tr>
+                    
+                </table>
+            </div>
+        </div>
+
+        <script src="/js/jquery.min.js "></script>
+        <script src="/js/popper.js "></script>
+        <script src="/js/bootstrap.min.js "></script>
+        <script src="/js/main.js "></script>
+</body>
+
+</html>
