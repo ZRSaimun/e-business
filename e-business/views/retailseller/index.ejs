@@ -8,8 +8,8 @@
 	<title>ebusiness: Retail Seller Menu</title>
 	<meta name="description" content="ebusiness:Retail Seller Dashbord" />
 	<meta name="keywords" content="ebusiness, template, html, css, menu, responsive, mobile-friendly" />
-	<meta name="author" content="Codrops" />
-	<link rel="shortcut icon" href="favicon.ico">
+	<meta name="author" content="ZR SAIMUN" />
+	<link rel="shortcut icon" href="/img/favicon.ico">
 	<!--  icons -->
 	<link rel="stylesheet" type="text/css" href="css/organicicons.css" />
 	<!-- try styles -->
@@ -34,8 +34,8 @@
 				<nav class="bp-nav">
 					<a class="bp-nav__item bp-icon bp-icon--prev" href="https://zrsaimun.blogspot.com//" data-info="previous "><span>Previous </span></a>
 					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<a class="bp-nav__item bp-icon bp-icon--drop" href="https://github.com/ZRSaimun/e-business" data-info="back to the Codrops article"><span>back to the Github Repo</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--archive" href="https://www.google.com/search?q=zr+saimun&oq=zr+saimun&aqs=chrome..69i57j35i39j69i61j69i60l2.6991j0j4&sourceid=chrome&ie=UTF-8" data-info="Blueprints archive"><span>Go to the Search</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--drop" href="https://github.com/ZRSaimun/e-business" data-info="back to the zrs article"><span>back to the Github Repo</span></a>
+					<a class="bp-nav__item bp-icon bp-icon--archive" href="https://www.google.com/search?q=zr+saimun&oq=zr+saimun&aqs=chrome..69i57j35i39j69i61j69i60l2.6991j0j4&sourceid=chrome&ie=UTF-8" data-info="ZRS archive"><span>Go to the Search</span></a>
 				</nav>
 			</div>
 		</header>
@@ -43,70 +43,52 @@
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
 			<div class="menu__wrap">
-				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Products</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Publish Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Sells</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Orders &amp; Request</a></li>
+				<ul>
+					<li><a href="retailseller/addproduct">add product</a></li>
 				</ul>
+				<ul>
+					<li><a href="retailseller/deleteproduct">delete product</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/editproduct">edit product</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/addCoupon">add coupon</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/addCatagory">add catagory</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/publishedProduct">published product</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/unpublishedProduct">unpublished product</a></li>
+				</ul>
+				<ul>
+					<li><a href="retailseller/reviewProduct">review</a></li>
+				</ul>
+				<ul>
+					<li><a href="/retailseller/totalIncome">Sells Analysis</a></li>
+				</ul>
+				<ul>
+					<li><a href="/retailseller/reportCustomer">Report Customer</a></li>
+                </ul>
+                <ul>
+					<li><a href="/retailseller/pendingOrders">Pending Orders</a></li>
+				</ul>
+				<ul>
+					<li><a href="/retailseller/deliverdOrders">Deliverd Orders</a></li>
+				</ul>
+				<li>
+					<a href="#">Payment</a>
+				</li>
+				<li>
+					<a href="/logout">LogOut</a>
+				</li>
 				<!-- Submenu 1 -->
-				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Products">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Add Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Delete Product &amp; Seeds</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Edit Details</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Add Coupon</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">New Feature</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
-				</ul>
-				<!-- Submenu 1-1 -->
-				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
-				</ul>
-				<!-- Submenu 2 -->
-				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Publish Product">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Published Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Unpublished Product</a></li>
-					<!--<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li> -->
-				</ul>
-				<!-- Submenu 2-1 -->
-				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Free Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Boosters</a></li>
-				</ul>
-				<!-- Submenu 3 -->
-				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Sells">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Review</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Sells Analysis</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Report Customer</a></li>
-				<!--	<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer </a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Gift Card</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li> -->
-				</ul>
-				<!-- Submenu 3-1 -->
-				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Premium Packs</a></li>
-				</ul>
-				<!-- Submenu 4 -->
-				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Orders &amp; Request">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Pending Orders</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Deliverd Orders</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
-				</ul>
-				<!-- Submenu 4-1 -->
-				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Producr</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Cotton Free</a></li>
-				</ul>
+				
+				
+				
 			</div>
 		</nav>
 		<div class="content">
@@ -162,6 +144,56 @@
 		}
 	})();
 	</script>
+
+
+
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+
+            <div align="center " width="100% ">
+                <table align="center " width="100% ">
+                    <tr>
+                        <td width="30% " colspan="5 ">
+                            <img align="right " src="<%=profile_pic%>" alt="person " height="200px " width="200px " />
+                        </td>
+                    </tr><br><br>
+                    <tr>
+                        <td width="30% ">User ID</td>
+                        <td width="10% ">:</td>
+                        <td width="30% ">
+                            <%=user_id%>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td>Name</td>
+                        <td>:</td>
+                        <td>
+                            <%=name%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Email</td>
+                        <td>:</td>
+                        <td>
+                            <%=email%>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Address</td>
+                        <td>:</td>
+                        <td>
+                            <%=address%>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <script src="/js/jquery.min.js "></script>
+        <script src="/js/popper.js "></script>
+        <script src="/js/bootstrap.min.js "></script>
+        <script src="/js/main.js "></script>
 </body>
 
 </html>
