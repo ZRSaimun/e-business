@@ -146,66 +146,69 @@
 	</script>
 
 
-
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
             <div align="center">
-                <form method="POST" enctype="multipart/form-data">
-                    <span align="center">
-                        <h3>Delete Product</h3>
-                    </span>
-                    <table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
-                        <tr>
-                            <td width="45%">Product Name</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=product_name%></span>
+                <span align="center">
+                    <h3>All Published Products </h3>
+                </span>
+                <table border="1px" width="80%">
+                    <tr>
+                        <th width="10%">Image</th>
+                        <th width="30%">product ID</th>
+                        <th width="30%">Name</th>
+                        <th width="30%">Quantity</th>
+                        <th width="20%">price</th>
+                        <th width="20%">Catagory</th>
+                        <th width="30%">Rating</th>
+                        <th width="30%">Description</th>
+                        <th width="30%">Published</th>
+                        <th width="30%">exclusive</th>
+                        <th width="20%">Action</th>
+                    </tr>
 
-                            </td>
-                        </tr>
+                    <% for(var i=0; i < productList.length; i++){ %>
                         <tr>
-                            <td width="45%">Quntity</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=quantity%></span>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Product price</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=price%></span>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Description</td>
-                            <td>:</td>
                             <td>
-                                <span><%=description%></span>
-
+                                <img align="center" src="<%= productList[i].product_img %>" alt="logo" height="100px" width="100px" />
                             </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">.</td>
-                            <td width="10%"></td>
-                            <td width="55%">
-                                <span><h5>Are you sure??</h5></span>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
                             <td>
-                                <input type="submit" name="add" value="Delete" />
+                                <a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
+                                    <%= productList[i].product_id %>
+                                </a>
+
+                            </td>
+                            <td>
+                                <%= productList[i].product_name %>
+                            </td>
+                            <td>
+                                <%= productList[i].quantity %>
+                            </td>
+                            <td>
+                                <%= productList[i].price %>
+                            </td>
+                            <td>
+                                <%= productList[i].catatgoryID %>
+                            </td>
+                            <td>
+                                <%= productList[i].average_rating %>
+                            </td>
+                            <td>
+                                <%= productList[i].description %>
+                            </td>
+                            <td>
+                                <%= productList[i].published %>
+                            </td>
+                            <td>
+                                <%= productList[i].exclusive %>
+                            </td>
+                            <td>
+
+                                <a href="/retailseller/totalIncome/details/<%= productList[i].product_id %>">Details</a>
                             </td>
                         </tr>
-                    </table>
-                </form>
+                        <% } %>
+                </table>
             </div>
         </div>
 

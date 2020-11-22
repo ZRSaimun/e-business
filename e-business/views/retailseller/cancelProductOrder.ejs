@@ -146,20 +146,27 @@
 	</script>
 
 
-
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
             <div align="center">
                 <form method="POST" enctype="multipart/form-data">
                     <span align="center">
-                        <h3>Delete Product</h3>
+                        <h3>Cancel Product Order</h3>
                     </span>
                     <table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
                         <tr>
-                            <td width="45%">Product Name</td>
+                            <td width="45%">Product ID</td>
                             <td width="10%">:</td>
                             <td width="45%">
-                                <span><%=product_name%></span>
+                                <span><%=product_id%></span>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="45%">Order ID</td>
+                            <td width="10%">:</td>
+                            <td width="45%">
+                                <span><%=order_id%></span>
 
                             </td>
                         </tr>
@@ -171,28 +178,12 @@
 
                             </td>
                         </tr>
-                        <tr>
-                            <td width="45%">Product price</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=price%></span>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Description</td>
-                            <td>:</td>
-                            <td>
-                                <span><%=description%></span>
-
-                            </td>
-                        </tr>
                         <tr>
                             <td width="45%">.</td>
                             <td width="10%"></td>
                             <td width="55%">
-                                <span><h5>Are you sure??</h5></span>
+                                <span><h5>You want to Cancel the Order??</h5></span>
 
                             </td>
                         </tr>
@@ -201,7 +192,7 @@
                             <td></td>
                             <td></td>
                             <td>
-                                <input type="submit" name="add" value="Delete" />
+                                <input type="submit" name="add" value="Yes" />
                             </td>
                         </tr>
                     </table>

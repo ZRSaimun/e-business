@@ -150,62 +150,57 @@
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
             <div align="center">
-                <form method="POST" enctype="multipart/form-data">
-                    <span align="center">
-                        <h3>Delete Product</h3>
-                    </span>
-                    <table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
-                        <tr>
-                            <td width="45%">Product Name</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=product_name%></span>
+                <span align="center">
+                    <h3>Report Customer</h3>
+                </span>
+                <table border="1px" width="80%">
+                    <tr>
+                        <th width="10%">Order Id</th>
+                        <th width="10%">Product ID</th>
+                        <th width="10%">Customer Id</th>
+                        <th width="10%">Quantity</th>
+                        <th width="20%">Status</th>
+                        <th width="10%">Paid</th>
+                        <th width="15%">Order Date</th>
+                        <th width="10%">RetailSeller Revenue</th>
+                        <th width="40%">Action</th>
+                    </tr>
 
-                            </td>
-                        </tr>
+                    <% for(var i=0; i < productList.length; i++){ %>
                         <tr>
-                            <td width="45%">Quntity</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=quantity%></span>
-
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Product price</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=price%></span>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td>Description</td>
-                            <td>:</td>
                             <td>
-                                <span><%=description%></span>
-
+                                <%= productList[i].order_id %>
                             </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">.</td>
-                            <td width="10%"></td>
-                            <td width="55%">
-                                <span><h5>Are you sure??</h5></span>
-
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
                             <td>
-                                <input type="submit" name="add" value="Delete" />
+                                <a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
+                                    <%= productList[i].product_id %>
+                                </a>
+
+                            </td>
+                            <td>
+                                <%= productList[i].customer_id %>
+                            </td>
+                            <td>
+                                <%= productList[i].quantity %>
+                            </td>
+                            <td>
+                                <%= productList[i].order_status %>
+                            </td>
+                            <td>
+                                <%= productList[i].paid %>
+                            </td>
+                            <td>
+                                <%= productList[i].date %>
+                            </td>
+                            <td>
+                                <%= productList[i].retailseller_revenue %>
+                            </td>
+                            <td>
+                                <a href="/retailseller/reportCustomer/report/<%= productList[i].customer_id %>">Report</a>
                             </td>
                         </tr>
-                    </table>
-                </form>
+                        <% } %>
+                </table>
             </div>
         </div>
 
