@@ -1,0 +1,95 @@
+
+ 
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">reports</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">verification</li>
+                        </ol>
+                        <!-- <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                .
+                            </div>
+                        </div> -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Reporting user</th>
+                                                <th>complain for</th>
+                                                <th>complain</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Reporting user</th>
+                                                <th>complain for</th>
+                                                <th>complain</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <tr>
+                                                <!-- reporting user -->
+                                            <% reportInfo.forEach(report=>{%>
+                                                <% customerInfo.forEach(c=>{%>
+                                                    <% if(c.user_id == report.fromuser){%>
+                                                        <td><%=  c.name %></td>
+                                                        <%}%>
+                                                    <%}) %> 
+                                                <% retailsellerInfo.forEach(r=>{%>
+                                                    <% if(r.user_id==report.fromuser){%>
+                                                        <td><%=  r.name %></td>
+                                                        <%} %> 
+                                                    <%}) %>
+                                            
+                                               
+                                                <% sellerInfo.forEach(s=>{%>
+                                                    <% if(s.user_id==report.fromuser){%>
+                                                        <td><%=  s.name %></td>
+                                                        <%} %> 
+                                                    <%}) %>
+
+
+                                            <!-- complain for -->
+                                                <% customerInfo.forEach(c=>{%>
+                                                    <% if(c.user_id == report.tomuser){%>
+                                                        <td><%=  c.name %></td>
+                                                        <%}%>
+                                                    <%}) %> 
+                                                <% retailsellerInfo.forEach(r=>{%>
+                                                    <% if(r.user_id==report.touser){%>
+                                                        <td><%=  r.name %></td>
+                                                        <%} %> 
+                                                    <%}) %>
+                                            
+                                               
+                                                <% sellerInfo.forEach(s=>{%>
+                                                    <% if(s.user_id==report.touser){%>
+                                                        <td><%=  s.name %></td>
+                                                        <%} %> 
+                                                    <%}) %>
+                                                    <td><%= report.report_msg %> </td>
+
+                                                    <td> <a class="btn btn-danger" href="/admin/report/delete/<%= report.report_id %>">Delete</a></td>
+                                                </tr>
+
+                                                <%}) %> 
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                

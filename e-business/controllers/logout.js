@@ -1,12 +1,14 @@
-  var express = require('express');
-  var mysql = require('mysql');
-  var router = express.Router();
+const express 	= require('express');
+const router 	= express.Router();
 
-  router.get('/', (req, res) => {
+router.get('/', (req, res)=>{
+	
+	res.clearCookie('uname');
+	res.redirect('/login');
+});
 
-      req.session.uId = null;
-      res.redirect('/login');
 
-  });
+module.exports = router;
 
-  module.exports = router;
+
+

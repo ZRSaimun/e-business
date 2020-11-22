@@ -1,0 +1,98 @@
+
+ 
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Order List</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">List</li>
+                        </ol>
+                        <!-- <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                .
+                            </div>
+                        </div> -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>customer Id</th>
+                                                <th>User ID</th>
+                                                <th>Product ID</th>
+                                                <th>Quantity</th>
+                                                <th>Order Status</th>
+                                                <th>Date</th>
+                                                <th>Seller revenue</th>
+                                                <th>Company revenue</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Order ID</th>
+                                                <th>customer Id</th>
+                                                <th>User ID</th>
+                                                <th>Product ID</th>
+                                                <th>Quantity</th>
+                                                <th>Order Status</th>
+                                                <th>Date</th>
+                                                <th>Seller revenue</th>
+                                                <th>Company revenue</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <% orderInfo.forEach(order=>{ %>
+                                                <tr>
+                                                    <td><%= order.order_id %> </td>
+                                                    <% customerInfo.forEach(c=>{%>
+                                                        <% if(c.customer_id==order.customer_id){%>
+                                                                <td><%=c.name%></td>
+                                                            <%} %> 
+                                                        
+                                                        <%}) %> 
+
+                                                    
+                                                        <% sellerInfo.forEach(s=>{%>
+                                                            <% if(s.user_id == order.user_id){%>
+                                                                <td><%=  s.name %></td>
+                                                                <%}%>
+                                                            <%}) %> 
+                                                        <% retailsellerInfo.forEach(r=>{%>
+                                                            <% if(r.user_id==order.user_id){%>
+                                                                <td><%=  r.name %></td>
+                                                                <%} %> 
+                                                            <%}) %>
+
+                                                        
+                                                    <% productInfo.forEach(p=>{%>
+                                                            <% if(p.product_id==order.product_id){%>
+                                                                <td><%=p.product_name%></td>
+                                                                <%} %> 
+                                                                
+                                                            <%}) %>
+                                                   
+                                                    <td><%= order.quantity %> </td>
+                                                    <td><%= order.order_status %> </td>
+                                                    <td><%= order.date %> </td>
+                                                    <td><%= order.seller_revenue %> </td>
+                                                    <td><%= order.company_revenue %> </td>
+                                                </tr>
+
+                                          <%  }) %> 
+                                            
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                

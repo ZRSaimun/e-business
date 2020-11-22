@@ -1,36 +1,47 @@
-var express = require('express');
-var userModel = require.main.require('./model/user-model');
-var router = express.Router();
 
-router.get('/', (req, res) => {
-    res.render('login/index');
+const express = require("express")
+const { body, validationResult} = require('express-validator'); 
+const adminModel = require("../models/adminModel");
+const router 	= express.Router();
+
+router.post("*",[				  //POST : ("*")
+	body('email').isEmail(),
+	
+	body('pass').isLength({ min: 5 })
+	],(req, res,next)=>{
+
+		const errors = validationResult(req);
+		if (!errors.isEmpty()) {
+			return res.status(400).json({ errors: errors.array() });
+		}else{
+			next()
+		}
+	
+	})
+
+
+router.get('/', (req, res)=>{ //GET:/login
+	res.render('admin/adminLogin',{layout:'./layouts/registration'});
 });
 
-router.post('/', (req, res) => {
+router.post("/",(req,res)=>{ //POST:/login
+    const admin ={
+        username : req.body.email,
+        password : req.body.pass
+    }
 
-    var user = {
-        userId: req.body.uname,
-        password: req.body.password
-    };
-    userModel.validate(user, function(result) {
-        if (result.length > 0) {
-            req.session.uId = req.body.uname;
-            /*if (result[0].U_TYPE == "ADMIN" && result[0].U_STATUS == "VALID") {
-                res.redirect('/admin');
+    adminModel.validate(admin,results=>{
 
-            } else if (result[0].U_TYPE == "MEMBER" && result[0].U_STATUS == "VALID") {
-                res.redirect('/member');
-            } else*/
-            if (result[0].type == "RETAILSELLER") {
-                res.redirect('/retailseller');
-            } else {
-                res.render("login/index");
-
-            }
-        } else {
-            res.render("login/index");
+        if (results) {
+                res.cookie('uname', req.body.email)
+                res.cookie('aid', results[0].admin_id)
+                res.redirect("/admin")
+        }else{
+            res.redirect("/login") 
         }
-    });
-});
+        
+    })
+})
+
 
 module.exports = router;

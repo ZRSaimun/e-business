@@ -1,68 +1,47 @@
-var express = require('express');
-var bodyParser = require('body-parser');
-var exSession = require('express-session');
-var path = require('path');
-var multer = require('multer');
-var cookieParser = require('cookie-parser');
-var signup = require('./controllers/signup');
-var login = require('./controllers/login');
-var admin = require('./controllers/admin');
-var member = require('./controllers/member');
-var restaurantModel = require.main.require('./model/restaurantModel');
-var retailseller = require('./controllers/retailseller');
+const express           = require("express");
+const cookieParser 		= require('cookie-parser');
+const expressLayouts = require('express-ejs-layouts')
+const bodyParser        = require("body-parser");
 
-var app = express();
-var port = 3000;
+//controllers
 
-//configuration
+const admin = require("./controllers/admin")
+const login = require("./controllers/login")
+const logout = require("./controllers/logout")
+
+
+const app = express();
+const port = 3000;
+
+//config
+app.use(expressLayouts);
 app.set('view engine', 'ejs');
-
+app.set('layout', './layouts/dashboard');
 
 //middleware
-/*---------------------------------------*/
-app.use(exSession({ secret: 'secret', saveUninitialized: true, resave: false }));
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use('/public', express.static('public'));
+
+
+
+app.use(bodyParser.urlencoded({extended: true}));
 app.use(cookieParser());
-var storage = multer.diskStorage({
-    destination: "./images/",
-    filename: function(req, file, cb) {
-        cb(null, "image_" + Date.now() + path.extname(file.originalname));
+
+//route
+app.use("/admin",admin);
+app.use("/login",login);
+app.use("/logout",logout);
+
+
+
+app.get("/",(req,res)=>{
+    res.cookie('up', __dirname+'/public/admin/uploads')
+    res.send("HOME");
+})
+
+
+
+app.listen(port,(err)=>{
+    if (!err) {
+        console.log("server started at "+port);
     }
-});
-app.use(multer({
-    storage: storage
-}).single('imageFile'));
-app.use('/signup', signup);
-app.use('/login', login);
-app.use('/admin', admin);
-app.use('/member', member);
-app.use('/retailseller', retailseller);
-
-
-app.use('/', express.static('asset'));
-/*app.use('/pictures', express.static('images'));*/
-
-
-//router
-/**---------------------------------------------- */
-
-
-app.get('/setCookie', (req, res) => {
-    res.cookie('cookie1', 'first cookie');
-    res.send("done");
-});
-
-app.get('/viewCookie', (req, res) => {
-    res.send(req.cookies['cookie1']);
-});
-
-app.get('/rmCookie', (req, res) => {
-    res.clearCookie('cookie1');
-    res.send('Done');
-});
-
-
-//server stratup
-app.listen(port, (error) => {
-    console.log('server started at ' + port);
-});
+})
