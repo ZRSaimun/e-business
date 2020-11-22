@@ -1,0 +1,68 @@
+
+ 
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Verify Seller</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">verification</li>
+                        </ol>
+                        <!-- <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                .
+                            </div>
+                        </div> -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>email</th>
+                                                <th>address</th>
+                                                <th>phone_no</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Name</th>
+                                                <th>email</th>
+                                                <th>address</th>
+                                                <th>phone_no</th>
+                                                <th>Action</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <% sellerInfo.forEach(s=>{%>
+                                                <% if(s.verified == 0){%>
+                                                    <tr>
+                                                        <td><%= s.user_id %> </td>
+                                                        <td><%= s.name %></td>
+                                                        <td><%= s.email %></td>
+                                                        <td><%= s.address %></td>
+                                                        <td><%= s.phone_no %></td>
+                                                        <td> <a class="btn btn-success" href="/admin/verifySeller/<%= s.user_id %>">verify</a></td>
+                                                    </tr>
+                                                    
+                                                    <%} %> 
+                                                
+                                                <%}) %> 
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                

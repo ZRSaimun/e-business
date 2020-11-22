@@ -1,0 +1,75 @@
+
+ 
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Seller List</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">seller</li>
+                        </ol>
+                        <!-- <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                .
+                            </div>
+                        </div> -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                
+                            </div>
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Date of Birth</th>
+                                                <th>phone No</th>
+                                                <th>level</th>
+                                                <th colspan="2">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th>Address</th>
+                                                <th>Date of Birth</th>
+                                                <th>phone No</th>
+                                                <th>level</th>
+                                                <th colspan="2">Action</th>
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <% sellerInfo.forEach(s=>{ %>
+                                                <tr>
+                                                    <td><%= s.name %> </td>
+                                                    <td><%= s.email %></td>
+                                                    <td><%= s.address %></td>
+                                                    <td><%= moment(s.dob).format(shortDateFormat) %></td>
+                                                    <td><%= s.phone_no %></td>
+                                                    <td><%= s.level %></td>
+                                                    <td> <a class="btn btn-danger"  href="/admin/seller/delete/<%= s.user_id %>">Delete</a></td>
+
+                                                    <% if(s.block_status == 0){%>
+                                                        <td> <a class="btn btn-warning"  href="/admin/seller/block/<%= s.user_id %>">Block</a></td>
+                                                    <%} else{%>
+                                                        <td> <a class="btn btn-warning"  href="/admin/seller/unblock/<%= s.user_id %>">UnBlock</a></td>
+                                                        <%}%> 
+                                                    
+                                                    
+                                                </tr>
+                                           <% }) %> 
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                

@@ -1,0 +1,97 @@
+<% flag = '' %> 
+                <main>
+                    <div class="container-fluid">
+                        <h1 class="mt-4">Product List</h1>
+                        <ol class="breadcrumb mb-4">
+                            <li class="breadcrumb-item"><a href="/admin">Dashboard</a></li>
+                            <li class="breadcrumb-item active">List</li>
+                        </ol>
+                        <!-- <div class="card mb-4">
+                            <div class="card-body">
+                                DataTables is a third party plugin that is used to generate the demo table below. For more information about DataTables, please visit the
+                                <a target="_blank" href="https://datatables.net/">official DataTables documentation</a>
+                                .
+                            </div>
+                        </div> -->
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <i class="fas fa-table mr-1"></i>
+                                
+                            </div>
+
+                            <!-- search -->
+                            <!-- <div class="col-sm-12 col-md-6">
+                                <div id="dataTable_filter" class="dataTables_filter">
+                                    <label>Search:<input type="search" class="form-control form-control-sm" placeholder="" aria-controls="dataTable"></label>
+                                </div>
+                            </div> -->
+                            <!-- search end -->
+                            <div class="card-body">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                        <thead>
+                                            <tr>
+                                                <th>Product Name</th>
+                                                <th>catagory</th>
+                                                <th>Quantity</th>
+                                                <th>Description</th>
+                                                <th>price</th>
+                                                <th>owner</th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tfoot>
+                                            <tr>
+                                                <th>Product Name</th>
+                                                <th>catagory</th>
+                                                <th>Quantity</th>
+                                                <th>Description</th>
+                                                <th>price</th>
+                                                <th>owner</th>
+                                        
+                                            </tr>
+                                        </tfoot>
+                                        <tbody>
+                                            <%productInfo.forEach(product=>{%>
+                                                
+                                              
+                                                <tr>
+                                                    <td><%=  product.product_name %> </td>
+
+                                                    <% catagoryInfo.forEach(c=>{ %>
+                                                        <% console.log("catagory",c.catagory_id) %> 
+                                                        <% console.log("product",product.catagory_id) %> 
+                                                        <% if(c.catagory_id == product.catagory_id){%>
+                                                            <td><%=  c.catagory_name  %> </td>
+                                                            
+                                                            <%}%>
+                                                   <% }) %> 
+
+                                                    <td><%=  product.quantity %></td>
+                                                    <td><%=  product.description %></td>
+                                                    <td><%=  product.price %></td>
+                                                   
+                                                    <% sellerInfo.forEach(s=>{%>
+                                                        <% if(s.user_id == product.user_id){%>
+                                                            <td><%=  s.name %></td>
+                                                            <%}%>
+                                                        <%}) %> 
+                                                    <% retailsellerInfo.forEach(r=>{%>
+                                                        <% if(r.user_id==product.user_id){%>
+                                                            <td><%=  r.name %></td>
+                                                            <%} %> 
+                                                        <%}) %>
+                                                    
+                                                        
+                                                </tr>
+
+                                           <% }) %> 
+                                           
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </main>
+                
