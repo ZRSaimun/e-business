@@ -11,12 +11,12 @@
 	<meta name="author" content="ZR SAIMUN" />
 	<link rel="shortcut icon" href="/img/favicon.ico">
 	<!--  icons -->
-	<link rel="stylesheet" type="text/css" href="css/organicicons.css" />
+	<link rel="stylesheet" type="text/css" href="/css/organicicons.css" />
 	<!-- try styles -->
-	<link rel="stylesheet" type="text/css" href="css/try.css" />
+	<link rel="stylesheet" type="text/css" href="/css/try.css" />
 	<!-- menu styles -->
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
-	<script src="js/modernizr-custom.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/component.css" />
+	<script src="/js/modernizr-custom.js"></script>
 </head>
 
 <body>
@@ -43,57 +43,146 @@
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
 			<div class="menu__wrap">
-				<ul>
-					<li><a href="retailseller/addproduct">add product</a></li>
+				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Products</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Publish Product</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Sells</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Orders &amp; Request</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Crete Poll</a></li>
+					<li  role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="/logout">Log Out</a></li>
 				</ul>
-				<ul>
-					<li><a href="retailseller/deleteproduct">delete product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/editproduct">edit product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/addCoupon">add coupon</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/addCatagory">add catagory</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/publishedProduct">published product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/unpublishedProduct">unpublished product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/reviewProduct">review</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/totalIncome">Sells Analysis</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/reportCustomer">Report Customer</a></li>
-                </ul>
-                <ul>
-					<li><a href="/retailseller/pendingOrders">Pending Orders</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/deliverdOrders">Deliverd Orders</a></li>
-				</ul>
-				<li>
-					<a href="#">Payment</a>
-				</li>
-				<li>
-					<a href="/logout">LogOut</a>
-				</li>
 				<!-- Submenu 1 -->
-				
-				
-				
+				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Products">
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/addProduct">Add Product</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/deleteProduct">Delete Product</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/editProduct">Edit Details</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/addCoupon">Add Coupon</a></li>
+					<li  role="menuitem"><a class="menu__link" href="retailseller/addCatagory">Add Catagory</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
+				</ul>
+				<!-- Submenu 1-1 -->
+				<ul data-menu="submenu-1-1" id="submenu-1-1" class="menu__level" tabindex="-1" role="menu" aria-label="Sale %">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Fair Trade Roots</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Dried Veggies</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Our Brand</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Homemade</a></li>
+				</ul>
+				<!-- Submenu 2 -->
+				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Publish Product">
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/publishedProduct">Published Product</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/unpublishedProduct">Unpublished Product</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
+					<!--<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li> -->
+				</ul>
+				<!-- Submenu 2-1 -->
+				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Free Product</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Boosters</a></li>
+				</ul>
+				<!-- Submenu 3 -->
+				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Sells">
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/reviewProduct">Review</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/totalIncome">Sells Analysis</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/reportCustomer">Report Customer</a></li>
+				<!--	<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer </a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Gift Card</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li> -->
+				</ul>
+				<!-- Submenu 3-1 -->
+				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Premium Packs</a></li>
+				</ul>
+				<!-- Submenu 4 -->
+				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Orders &amp; Request">
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/pendingOrders">Pending Orders</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/deliverdOrders">Deliverd Orders</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
+				</ul>
+				<!-- Submenu 4-1 -->
+				<ul data-menu="submenu-4-1" id="submenu-4-1" class="menu__level" tabindex="-1" role="menu" aria-label="Selection">
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Producr</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Cotton Free</a></li>
+				</ul>
+				<!--Submenu 5-->
+				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Crete Poll">
+					<li  role="menuitem"><a class="menu__link" href="#">Poll</a></li>
+				</ul>
 			</div>
 		</nav>
 		<div class="content">
-			<p class="info">Please choose a category</p>
+			<p class="info">Try Your Best Be Best</p>
 			<!-- Ajax loaded content here -->
+			<!-- Page Content  -->
+         
+
+   
+ 
+      <!-- Page Content  -->
+	  <div id="content" class="p-4 p-md-5">
+		<div align="center">
+			<span align="center">
+				<h3>All Orders Pending</h3>
+			</span>
+			<table border="1px" width="80%">
+				<tr>
+					<th width="10%">Order Id</th>
+					<th width="10%">Product ID</th>
+					<th width="10%">Customer Id</th>
+					<th width="10%">Quantity</th>
+					<th width="20%">Status</th>
+					<th width="10%">Paid</th>
+					<th width="15%">Order Date</th>
+					<th width="10%">RetailSeller Revenue</th>
+					<th width="40%">Action</th>
+				</tr>
+
+				<% for(var i=0; i < productList.length; i++){ %>
+					<tr>
+						<td>
+							<%= productList[i].order_id %>
+						</td>
+						<td>
+							<a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
+								<%= productList[i].product_id %>
+							</a>
+
+						</td>
+						<td>
+							<%= productList[i].customer_id %>
+						</td>
+						<td>
+							<%= productList[i].quantity %>
+						</td>
+						<td>
+							<%= productList[i].order_status %>
+						</td>
+						<td>
+							<%= productList[i].paid %>
+						</td>
+						<td>
+							<%= productList[i].date %>
+						</td>
+						<td>
+							<%= productList[i].retailseller_revenue %>
+						</td>
+						<td>
+							<a href="/retailseller/pendingOrders/deliverd/<%= productList[i].order_id %>">deliverd</a>
+							<a href="/retailseller/pendingOrders/cancel/<%= productList[i].order_id %>">cancel</a>
+						</td>
+					</tr>
+					<% } %>
+			</table>
+					<p style="color:red;">What Is This </p>
+                </form>
+            </div>
+        </div>
+
 		</div>
 	</div>
 	<!-- /view -->
@@ -145,70 +234,10 @@
 	})();
 	</script>
 
+			
+	
 
 
-        <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5">
-            <div align="center">
-                <span align="center">
-                    <h3>All Orders Pending</h3>
-                </span>
-                <table border="1px" width="80%">
-                    <tr>
-                        <th width="10%">Order Id</th>
-                        <th width="10%">Product ID</th>
-                        <th width="10%">Customer Id</th>
-                        <th width="10%">Quantity</th>
-                        <th width="20%">Status</th>
-                        <th width="10%">Paid</th>
-                        <th width="15%">Order Date</th>
-                        <th width="10%">RetailSeller Revenue</th>
-                        <th width="40%">Action</th>
-                    </tr>
-
-                    <% for(var i=0; i < productList.length; i++){ %>
-                        <tr>
-                            <td>
-                                <%= productList[i].order_id %>
-                            </td>
-                            <td>
-                                <a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
-                                    <%= productList[i].product_id %>
-                                </a>
-
-                            </td>
-                            <td>
-                                <%= productList[i].customer_id %>
-                            </td>
-                            <td>
-                                <%= productList[i].quantity %>
-                            </td>
-                            <td>
-                                <%= productList[i].order_status %>
-                            </td>
-                            <td>
-                                <%= productList[i].paid %>
-                            </td>
-                            <td>
-                                <%= productList[i].date %>
-                            </td>
-                            <td>
-                                <%= productList[i].retailseller_revenue %>
-                            </td>
-                            <td>
-                                <a href="/retailseller/pendingOrders/deliverd/<%= productList[i].order_id %>">deliverd</a>
-                                <a href="/retailseller/pendingOrders/cancel/<%= productList[i].order_id %>">cancel</a>
-                            </td>
-                        </tr>
-                        <% } %>
-                </table>
-            </div>
-        </div>
-
-        <script src="/js/jquery.min.js "></script>
-        <script src="/js/popper.js "></script>
-        <script src="/js/bootstrap.min.js "></script>
-        <script src="/js/main.js "></script>
 </body>
 
 </html>

@@ -39,89 +39,6 @@
 				</nav>
 			</div>
 		</header>
-		<div class="content">
-			<p class="info">Please Keep Your Valid Information </p>
-			<!-- Ajax loaded content here -->
-					<!-- Page Content  -->
-		<div id="content" class="p-4 p-md-5">
-			<div align="center">
-				<form method="POST" enctype="multipart/form-data">
-					<span align="center">
-						<h3>Add Product</h3>
-					</span>
-					<table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
-						<tr>
-							<td width="45%">Product Name</td>
-							<td width="10%">:</td>
-							<td width="45%">
-								<input type="text" name="name">
-							</td>
-						</tr>
-						<tr>
-							<td width="45%">Quntity</td>
-							<td width="10%">:</td>
-							<td width="45%">
-								<input type="number" name="quantity">
-							</td>
-						</tr>
-						<tr>
-							<td width="45%">Product price</td>
-							<td width="10%">:</td>
-							<td width="45%">
-								<input type="number" name="price">
-							</td>
-						</tr>
-						<tr>
-							<td width="45%">Catagory</td>
-							<td width="10%">:</td>
-							<td width="45%">
-								<select name="catagory" id="catagory">
-									<option value="men">Men</option>
-									<option value="women">Women</option>
-									<option value="child">Child</option>
-									
-								  </select>
-							</td>
-						</tr>
-						<tr>
-							<td>Description</td>
-							<td>:</td>
-							<td>
-								<input type="text" name="description" placeholder="Description">
-							</td>
-						</tr>
-		
-						<tr>
-							<td>Exclusive</td>
-							<td>:</td>
-							<td>
-								<select name="exclusive" id="exclusive">
-									<option value="yes">Yes</option>
-									<option value="no">No</option>
-									
-								  </select>
-							</td>
-						</tr>
-						<tr>
-							<td>Image</td>
-							<td>:</td>
-							<td>
-								<input type="file" name="imageFile" accept="image/*" />
-							</td>
-						</tr>
-						<tr>
-							<td></td>
-							<td></td>
-							<td>
-								<button type="submit" name="add">Add</button>
-							</td>
-						</tr>
-					</table>
-					<h1 class="info" style="color:red;">Will you sell it? </h1>
-				</form>
-			</div>
-		</div>
-		</div>
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
@@ -132,14 +49,15 @@
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Sells</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Orders &amp; Request</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Crete Poll</a></li>
+					<li  role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="/logout">Log Out</a></li>
 				</ul>
 				<!-- Submenu 1 -->
 				<ul data-menu="submenu-1" id="submenu-1" class="menu__level" tabindex="-1" role="menu" aria-label="Products">
 					<li  role="menuitem"><a class="menu__link" href="/retailseller/addProduct">Add Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/deleteProduct">Delete Product &amp; Seeds</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/editProduct">Edit Details</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/addCoupon">Add Coupon</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">New Feature</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/deleteProduct">Delete Product</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/editProduct">Edit Details</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/addCoupon">Add Coupon</a></li>
+					<li  role="menuitem"><a class="menu__link" href="retailseller/addCatagory">Add Catagory</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1-1" aria-owns="submenu-1-1" href="#">Sale %</a></li>
 				</ul>
 				<!-- Submenu 1-1 -->
@@ -151,10 +69,10 @@
 				</ul>
 				<!-- Submenu 2 -->
 				<ul data-menu="submenu-2" id="submenu-2" class="menu__level" tabindex="-1" role="menu" aria-label="Publish Product">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/publishedProduct">Published Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/unpublishedProduct">Unpublished Product</a></li>
-					<!--<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/publishedProduct">Published Product</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/unpublishedProduct">Unpublished Product</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2-1" aria-owns="submenu-2-1" href="#">Special Selection</a></li>
+					<!--<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Tropical Fruits</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Melons</a></li> -->
 				</ul>
 				<!-- Submenu 2-1 -->
@@ -165,9 +83,9 @@
 				</ul>
 				<!-- Submenu 3 -->
 				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Sells">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="/retailseller/reviewProduct">Review</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Sells Analysis</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Report Customer</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/reviewProduct">Review</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/totalIncome">Sells Analysis</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/reportCustomer">Report Customer</a></li>
 				<!--	<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer </a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Gift Card</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li> -->
@@ -181,8 +99,8 @@
 				</ul>
 				<!-- Submenu 4 -->
 				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Orders &amp; Request">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Pending Orders</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Deliverd Orders</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/pendingOrders">Pending Orders</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/deliverdOrders">Deliverd Orders</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4-1" aria-owns="submenu-4-1" href="#">Selection</a></li>
 				</ul>
 				<!-- Submenu 4-1 -->
@@ -193,11 +111,100 @@
 				</ul>
 				<!--Submenu 5-->
 				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Crete Poll">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Poll</a></li>
+					<li  role="menuitem"><a class="menu__link" href="#">Poll</a></li>
 				</ul>
 			</div>
 		</nav>
-		
+		<div class="content">
+			<p class="info">Try To Be Good With Good Quality Products  </p>
+			<!-- Ajax loaded content here -->
+			<!-- Page Content  -->
+         
+        <!-- Page Content  -->
+        <div id="content" class="p-4 p-md-5">
+            <div align="center">
+                <form method="POST" enctype="multipart/form-data">
+                    <span align="center">
+                        <h3>Add Product</h3>
+                    </span>
+                    <table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
+                        <tr>
+                            <td width="45%">Product Name</td>
+                            <td width="10%">:</td>
+                            <td width="45%">
+                                <input type="text" name="name">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="45%">Quntity</td>
+                            <td width="10%">:</td>
+                            <td width="45%">
+                                <input type="number" name="quantity">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="45%">Product price</td>
+                            <td width="10%">:</td>
+                            <td width="45%">
+                                <input type="number" name="price">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td width="45%">Catagory</td>
+                            <td width="10%">:</td>
+                            <td width="45%">
+
+                                <select name="catagory" id="catagory">
+                                        <% for(var i=0; i < productList.length; i++){ %>
+                                    <option value="<%= productList[i].catagory_name %>"><%= productList[i].catagory_name %></option>
+                                     <% } %>
+                                  </select>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Description</td>
+                            <td>:</td>
+                            <td>
+                                <input type="text" name="description" placeholder="Description">
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>Exclusive</td>
+                            <td>:</td>
+                            <td>
+                                <select name="exclusive" id="exclusive">
+                                    <option value="true">Yes</option>
+                                    <option value="false">No</option>
+                                    
+                                  </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Image</td>
+                            <td>:</td>
+                            <td>
+                                <input type="file" name="imageFile" accept="image/*" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td>
+							
+								<button type="submit" name="add">Add Product</button>
+                            </td>
+                        </tr>
+                    </table>	
+					<p style="color:rgb(20, 255, 39);">You choice Right Decision Making Customer Smile ('-') </p>
+                </form>
+            </div>
+        </div>
+
+		</div>
 	</div>
 	<!-- /view -->
 	<script src="js/classie.js"></script>
@@ -248,7 +255,8 @@
 	})();
 	</script>
 
-  
+			
+	
 
 
 </body>
