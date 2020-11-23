@@ -121,72 +121,72 @@
 			<!-- Page Content  -->
          
 
+  <!-- Page Content  -->
+  <div id="content" class="p-4 p-md-5">
+	<div align="center">
+		<form method="POST" enctype="multipart/form-data">
+			<span align="center">
+				<h3>Report Customer</h3>
+			</span>
+			<table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
+				<tr>
+					<td width="45%">Customer ID</td>
+					<td width="10%">:</td>
+					<td width="45%">
+						<span><%=customer_id%></span>
 
-        <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5">
-            <div align="center">
-                <form method="POST" enctype="multipart/form-data">
-                    <span align="center">
-                        <h3>Report Customer</h3>
-                    </span>
-                    <table width="50%" align="center" style="border-collapse: separate;border-spacing: 0 8px">
-                        <tr>
-                            <td width="45%">Customer ID</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=customer_id%></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="45%">Customer Name</td>
+					<td width="10%">:</td>
+					<td width="45%">
+						<span><%=name%></span>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Customer Name</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=name%></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="45%">Email</td>
+					<td width="10%">:</td>
+					<td width="45%">
+						<span><%=email%></span>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Email</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=email%></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="45%">Address</td>
+					<td width="10%">:</td>
+					<td width="45%">
+						<span><%=address%></span>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Address</td>
-                            <td width="10%">:</td>
-                            <td width="45%">
-                                <span><%=address%></span>
+					</td>
+				</tr>
 
-                            </td>
-                        </tr>
+				<tr>
+					<td>Contact</td>
+					<td>:</td>
+					<td>
+						<span><%=phone_no%></span>
 
-                        <tr>
-                            <td>Contact</td>
-                            <td>:</td>
-                            <td>
-                                <span><%=phone_no%></span>
+					</td>
+				</tr>
+				<tr>
+					<td width="45%">Report Message</td>
+					<td width="10%"></td>
+					<td width="55%">
+						<textarea name="report" id="report" cols="30" rows="10"></textarea>
 
-                            </td>
-                        </tr>
-                        <tr>
-                            <td width="45%">Report Message</td>
-                            <td width="10%"></td>
-                            <td width="55%">
-                                <textarea name="report" id="report" cols="30" rows="10"></textarea>
+					</td>
+				</tr>
 
-                            </td>
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-								<button type="submit" name="add">Report</button>
-                            </td>
-                        </tr>
-                    </table>
+				<tr>
+					<td></td>
+					<td></td>
+					<td>
+						<button type="submit" name="add">Report</button>
+					</td>
+				</tr>
+			</table>
                
 					<p style="color:red;">Are You Serious With This </p>
                 </form>

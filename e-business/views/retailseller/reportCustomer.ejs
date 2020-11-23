@@ -121,62 +121,60 @@
 			<!-- Page Content  -->
          
 
+       <!-- Page Content  -->
+	   <div id="content" class="p-4 p-md-5">
+		<div align="center">
+			<span align="center">
+				<h3>Report Customer</h3>
+			</span>
+			<table border="1px" width="80%">
+				<tr>
+					<th width="10%">Order Id</th>
+					<th width="10%">Product ID</th>
+					<th width="10%">Customer Id</th>
+					<th width="10%">Quantity</th>
+					<th width="20%">Status</th>
+					<th width="10%">Paid</th>
+					<th width="15%">Order Date</th>
+					<th width="10%">Seller Revenue</th>
+					<th width="40%">Action</th>
+				</tr>
 
-        <!-- Page Content  -->
-        <div id="content" class="p-4 p-md-5">
-            <div align="center">
-                <span align="center">
-                    <h3>Report Customer</h3>
-                </span>
-                <table border="1px" width="80%">
-                    <tr>
-                        <th width="10%">Order Id</th>
-                        <th width="10%">Product ID</th>
-                        <th width="10%">Customer Id</th>
-                        <th width="10%">Quantity</th>
-                        <th width="20%">Status</th>
-                        <th width="10%">Paid</th>
-                        <th width="15%">Order Date</th>
-                        <th width="10%">RetailSeller Revenue</th>
-                        <th width="40%">Action</th>
-                    </tr>
+				<% for(var i=0; i < productList.length; i++){ %>
+					<tr>
+						<td>
+							<%= productList[i].order_id %>
+						</td>
+						<td>
+							<a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
+								<%= productList[i].product_id %>
+							</a>
 
-                    <% for(var i=0; i < productList.length; i++){ %>
-                        <tr>
-                            <td>
-                                <%= productList[i].order_id %>
-                            </td>
-                            <td>
-                                <a href="/retailseller/detailProduct/<%= productList[i].product_id %>">
-                                    <%= productList[i].product_id %>
-                                </a>
-
-                            </td>
-                            <td>
-                                <%= productList[i].customer_id %>
-                            </td>
-                            <td>
-                                <%= productList[i].quantity %>
-                            </td>
-                            <td>
-                                <%= productList[i].order_status %>
-                            </td>
-                            <td>
-                                <%= productList[i].paid %>
-                            </td>
-                            <td>
-                                <%= productList[i].date %>
-                            </td>
-                            <td>
-                                <%= productList[i].retailseller_revenue %>
-                            </td>
-                            <td>
-                                <a href="/retailseller/reportCustomer/report/<%= productList[i].customer_id %>">Report</a>
-                            </td>
-                        </tr>
-                        <% } %>
-                
-                </table>
+						</td>
+						<td>
+							<%= productList[i].customer_id %>
+						</td>
+						<td>
+							<%= productList[i].quantity %>
+						</td>
+						<td>
+							<%= productList[i].order_status %>
+						</td>
+						<td>
+							<%= productList[i].paid %>
+						</td>
+						<td>
+							<%= productList[i].date %>
+						</td>
+						<td>
+							<%= productList[i].seller_revenue %>
+						</td>
+						<td>
+							<a href="/retailseller/reportCustomer/report/<%= productList[i].customer_id %>">Report</a>
+						</td>
+					</tr>
+					<% } %>
+			</table>
 					<p style="color:red;">Are You Serious With This </p>
                 </form>
             </div>
