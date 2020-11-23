@@ -1,150 +1,96 @@
-<!DOCTYPE html>
-<html lang="en" class="no-js">
+<!doctype html>
+<html lang="en">
 
 <head>
-	<meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>ebusiness: Retail Seller Menu</title>
-	<meta name="description" content="ebusiness:Retail Seller Dashbord" />
-	<meta name="keywords" content="ebusiness, template, html, css, menu, responsive, mobile-friendly" />
-	<meta name="author" content="ZR SAIMUN" />
-	<link rel="shortcut icon" href="/img/favicon.ico">
-	<!--  icons -->
-	<link rel="stylesheet" type="text/css" href="css/organicicons.css" />
-	<!-- try styles -->
-	<link rel="stylesheet" type="text/css" href="css/try.css" />
-	<!-- menu styles -->
-	<link rel="stylesheet" type="text/css" href="css/component.css" />
-	<script src="js/modernizr-custom.js"></script>
+    <title>Sidebar 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/css/style1.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
 </head>
 
+
 <body>
-	<!-- Main container -->
-	<div class="container">
-		<!-- ebusiness header -->
-		<header class="bp-header cf">
-			<div class="dummy-logo">
-				<div class="dummy-icon foodicon foodicon--coconut"></div>
-				<h2 class="dummy-heading">RETAIL SELLER</h2>
-			</div>
-			<div class="bp-header__main">
-				<span class="bp-header__present">ebusiness <span class="bp-tooltip bp-icon bp-icon--about" data-content="The ebusiness are a collection of basic and minimal website concepts, components, plugins and layouts with minimal style for easy adaption and usage, or simply for inspiration."></span></span>
-				<h1 class="bp-header__title">Retail Seller Menu</h1>
-				<nav class="bp-nav">
-					<a class="bp-nav__item bp-icon bp-icon--prev" href="https://zrsaimun.blogspot.com//" data-info="previous "><span>Previous </span></a>
-					<!--a class="bp-nav__item bp-icon bp-icon--next" href="" data-info="next Blueprint"><span>Next Blueprint</span></a-->
-					<a class="bp-nav__item bp-icon bp-icon--drop" href="https://github.com/ZRSaimun/e-business" data-info="back to the zrs article"><span>back to the Github Repo</span></a>
-					<a class="bp-nav__item bp-icon bp-icon--archive" href="https://www.google.com/search?q=zr+saimun&oq=zr+saimun&aqs=chrome..69i57j35i39j69i61j69i60l2.6991j0j4&sourceid=chrome&ie=UTF-8" data-info="ZRS archive"><span>Go to the Search</span></a>
-				</nav>
-			</div>
-		</header>
-		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
-		<nav id="ml-menu" class="menu">
-			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
-			<div class="menu__wrap">
-				<ul>
-					<li><a href="retailseller/addproduct">add product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/deleteproduct">delete product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/editproduct">edit product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/addCoupon">add coupon</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/addCatagory">add catagory</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/publishedProduct">published product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/unpublishedProduct">unpublished product</a></li>
-				</ul>
-				<ul>
-					<li><a href="retailseller/reviewProduct">review</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/totalIncome">Sells Analysis</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/reportCustomer">Report Customer</a></li>
+
+    <div class="wrapper d-flex align-items-stretch">
+        <nav id="sidebar">
+            <div class="p-4 pt-5">
+                <a href="#" class="img logo rounded-circle mb-5" style="background-image: url(images/logo.jpg);"></a>
+                <ul class="list-unstyled components mb-5">
+                    <li>
+                        <a href="/retailseller">Profile</a>
+                    </li>
+                    <li class="active">
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Products</a>
+                        <ul class="collapse list-unstyled" id="homeSubmenu">
+                            <li>
+                                <a href="/retailseller/addProduct">Add Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/deleteProduct">Delete Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/editProduct">Edit Deatils</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/addCoupon">Add Coupon</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#noSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Publish Product</a>
+                        <ul class="collapse list-unstyled" id="noSubmenu">
+                            <li>
+                                <a href="/retailseller/publishedProduct">Published Product</a>
+                            </li>
+                            <li>
+                                <a href="/retailseller/unpublishedProduct">Unpublished Product</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Sells</a>
+                        <ul class="collapse list-unstyled" id="pageSubmenu">
+                            <li>
+                                <a href="/retailseller/reviewProduct">Review</a>
+                            </li>
+                            <li>
+                                <a href="#">Sells Analysis</a>
+                            </li>
+                            <li>
+                                <a href="#">Report Customer</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">Orders</a>
+                    </li>
+                    <li>
+                        <a href="#">Payment</a>
+                    </li>
                 </ul>
-                <ul>
-					<li><a href="/retailseller/pendingOrders">Pending Orders</a></li>
-				</ul>
-				<ul>
-					<li><a href="/retailseller/deliverdOrders">Deliverd Orders</a></li>
-				</ul>
-				<li>
-					<a href="#">Payment</a>
-				</li>
-				<li>
-					<a href="/logout">LogOut</a>
-				</li>
-				<!-- Submenu 1 -->
-				
-				
-				
-			</div>
-		</nav>
-		<div class="content">
-			<p class="info">Please choose a category</p>
-			<!-- Ajax loaded content here -->
-		</div>
-	</div>
-	<!-- /view -->
-	<script src="js/classie.js"></script>
-	<script src="js/dummydata.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-	(function() {
-		var menuEl = document.getElementById('ml-menu'),
-			mlmenu = new MLMenu(menuEl, {
-				// breadcrumbsCtrl : true, // show breadcrumbs
-				// initialBreadcrumb : 'all', // initial breadcrumb text
-				backCtrl : false, // show back button
-				// itemsDelayInterval : 60, // delay between each menu item sliding animation
-				onItemClick: loadDummyData // callback: item that doesn´t have a submenu gets clicked - onItemClick([event], [inner HTML of the clicked item])
-			});
 
-		// mobile menu toggle
-		var openMenuCtrl = document.querySelector('.action--open'),
-			closeMenuCtrl = document.querySelector('.action--close');
+                <div class="footer">
+                    <p>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib.com</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
 
-		openMenuCtrl.addEventListener('click', openMenu);
-		closeMenuCtrl.addEventListener('click', closeMenu);
-
-		function openMenu() {
-			classie.add(menuEl, 'menu--open');
-			closeMenuCtrl.focus();
-		}
-
-		function closeMenu() {
-			classie.remove(menuEl, 'menu--open');
-			openMenuCtrl.focus();
-		}
-
-		// simulate grid content loading
-		var gridWrapper = document.querySelector('.content');
-
-		function loadDummyData(ev, itemName) {
-			ev.preventDefault();
-
-			closeMenu();
-			gridWrapper.innerHTML = '';
-			classie.add(gridWrapper, 'content--loading');
-			setTimeout(function() {
-				classie.remove(gridWrapper, 'content--loading');
-				gridWrapper.innerHTML = '<ul class="products">' + dummyData[itemName] + '<ul>';
-			}, 700);
-		}
-	})();
-	</script>
-
+            </div>
+        </nav>
 
         <!-- Page Content  -->
         <div id="content" class="p-4 p-md-5">
@@ -170,7 +116,7 @@
                     <% for(var i=0; i < productList.length; i++){ %>
                         <tr>
                             <td>
-                                <img align="center" src="<%= productList[i].	product_img %>" alt="logo" height="100px" width="100px" />
+                                <img align="center" src="<%= productList[i].R_IMAGE %>" alt="logo" height="100px" width="100px" />
                             </td>
                             <td>
                                 <%= productList[i].product_id %>
