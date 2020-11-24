@@ -9,7 +9,7 @@
 	<meta name="description" content="ebusiness:Retail Seller Dashbord" />
 	<meta name="keywords" content="ebusiness, template, html, css, menu, responsive, mobile-friendly" />
 	<meta name="author" content="ZR SAIMUN" />
-	<link rel="shortcut icon" href="/img/favicon.ico">
+	<link rel="shortcut icon" href="./img/favicon.ico">
 	<!--  icons -->
 	<link rel="stylesheet" type="text/css" href="css/organicicons.css" />
 	<!-- try styles -->
@@ -39,14 +39,26 @@
 				</nav>
 			</div>
 		</header>
+		
+ <!-- Table start  -->
+ <div id="content" class="p-4 p-md-5">
+	
+
+
+		<h1 >Hey <%=name%>  Wel-Come To Your Home</h1>
+
+		<img src="<%=profile_pic%>" alt="person " height="450px " width="700px " />
+
+	
+</div>
 		<button class="action action--open" aria-label="Open Menu"><span class="icon icon--menu"></span></button>
 		<nav id="ml-menu" class="menu">
 			<button class="action action--close" aria-label="Close Menu"><span class="icon icon--cross"></span></button>
 			<div class="menu__wrap">
 				<ul data-menu="main" class="menu__level" tabindex="-1" role="menu" aria-label="All">
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Products</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Publish Product</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Sells</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-1" aria-owns="submenu-1" href="#">Manufacture</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-2" aria-owns="submenu-2" href="#">Visible</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3" aria-owns="submenu-3" href="#">Analysis</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-4" aria-owns="submenu-4" href="#">Orders &amp; Request</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-5" aria-owns="submenu-5" href="#">Crete Poll</a></li>
 					<li  role="menuitem"><a class="menu__link" data-submenu="submenu-6" aria-owns="submenu-6" href="/logout">Log Out</a></li>
@@ -77,9 +89,9 @@
 				</ul>
 				<!-- Submenu 2-1 -->
 				<ul data-menu="submenu-2-1" id="submenu-2-1" class="menu__level" tabindex="-1" role="menu" aria-label="Special Selection">
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Free Product</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Exotic Mixes</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Wild Pick</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Boosters</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Vitamin Boosters</a></li>
 				</ul>
 				<!-- Submenu 3 -->
 				<ul data-menu="submenu-3" id="submenu-3" class="menu__level" tabindex="-1" role="menu" aria-label="Sells">
@@ -87,15 +99,15 @@
 					<li  role="menuitem"><a class="menu__link" href="/retailseller/totalIncome">Sells Analysis</a></li>
 					<li  role="menuitem"><a class="menu__link" href="/retailseller/reportCustomer">Report Customer</a></li>
 				<!--	<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Offer </a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Gift Card</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li> -->
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Gift Card</a></li>-->
+					<li class="menu__item" role="menuitem"><a class="menu__link" data-submenu="submenu-3-1" aria-owns="submenu-3-1" href="#">Promo Packs</a></li> 
 				</ul>
 				<!-- Submenu 3-1 -->
 				<ul data-menu="submenu-3-1" id="submenu-3-1" class="menu__level" tabindex="-1" role="menu" aria-label="Promo Packs">
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Starter Kit</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">The Essential 8</a></li>
 					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Bolivian Secrets</a></li>
-					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Premium Packs</a></li>
+					<li class="menu__item" role="menuitem"><a class="menu__link" href="#">Flour Packs</a></li>
 				</ul>
 				<!-- Submenu 4 -->
 				<ul data-menu="submenu-4" id="submenu-4" class="menu__level" tabindex="-1" role="menu" aria-label="Orders &amp; Request">
@@ -111,14 +123,11 @@
 				</ul>
 				<!--Submenu 5-->
 				<ul data-menu="submenu-5" id="submenu-5" class="menu__level" tabindex="-1" role="menu" aria-label="Crete Poll">
-					<li  role="menuitem"><a class="menu__link" href="#">Poll</a></li>
+					<li  role="menuitem"><a class="menu__link" href="/retailseller/createpoll">Poll</a></li>
 				</ul>
 			</div>
 		</nav>
-		<div class="content">
-			<p class="info">Please choose a category</p>
-			<!-- Ajax loaded content here -->
-		</div>
+		
 	</div>
 	<!-- /view -->
 	<script src="js/classie.js"></script>
@@ -169,48 +178,6 @@
 	})();
 	</script>
 
- <!-- Page Content  -->
- <div id="content" class="p-4 p-md-5">
-
-	<div align="center " width="100% ">
-		<table align="center " width="100% ">
-			<tr>
-				<td width="30% " colspan="5 ">
-					<img align="right " src="<%=profile_pic%>" alt="person " height="200px " width="200px " />
-				</td>
-			</tr><br><br>
-			<tr>
-				<td width="30% ">User ID</td>
-				<td width="10% ">:</td>
-				<td width="30% ">
-					<%=user_id%>
-				</td>
-
-			</tr>
-			<tr>
-				<td>Name</td>
-				<td>:</td>
-				<td>
-					<%=name%>
-				</td>
-			</tr>
-			<tr>
-				<td>Email</td>
-				<td>:</td>
-				<td>
-					<%=email%>
-				</td>
-			</tr>
-			<tr>
-				<td>Address</td>
-				<td>:</td>
-				<td>
-					<%=address%>
-				</td>
-			</tr>
-		</table>
-	</div>
-</div>
 
 
 </body>
