@@ -30,6 +30,17 @@ RetailSeller page
 
 ![Screenshot_1](https://user-images.githubusercontent.com/60029434/101406367-8db3fb80-3903-11eb-806c-f7c4cb2135a7.jpg)
 
+![Screenshot_2](https://user-images.githubusercontent.com/60029434/101406495-bb994000-3903-11eb-8967-7384cc4dfab4.jpg)
+
+![Screenshot_3](https://user-images.githubusercontent.com/60029434/101406503-bd630380-3903-11eb-9e10-29a25bc5008e.jpg)
+
+![Screenshot_5](https://user-images.githubusercontent.com/60029434/101406507-bf2cc700-3903-11eb-8a45-7bb7475610b6.jpg)
+
+![Screenshot_6](https://user-images.githubusercontent.com/60029434/101406517-c0f68a80-3903-11eb-83eb-d9aeecd9fb34.jpg)
+
+![Screenshot_7](https://user-images.githubusercontent.com/60029434/101406524-c2c04e00-3903-11eb-93b3-cc5bfffebeb9.jpg)
+
+
 ## License
 
 The Lashop is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
