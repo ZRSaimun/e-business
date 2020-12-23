@@ -17,7 +17,7 @@ Run the git command from the Terminal:
 
 Next, you will need to run node_modules install into your e-business project folder
 
-	node_modules
+run npm install 	node_modules
 	
 
 ## Screenshots
